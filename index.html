@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-  <ul>
-      <li>開始します...</li>
-      <li>最適化中...</li>
-  </ul>
- <a href="index.html">ホーム</a>
- <img src="sanpuru/aaa.jpg">
+    <header>
+        <div class="container">
+            <h1>タイトル</h1>
+            <h2>サブタイトル</h2>
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<p id="choice">ここに日時を表示します。</p>
+<p id="test">書き換えtest</p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+console.log('よく柿食う客だ');
+window.alert('ダイアログボックスHTMLtest');
+console.log(document.getElementById('choice'));
+document.getElementById('choice').textContent = new Date();
+document.getElementById('test').textContent = ('通知を受け取る');
+console.log(document.getElementById('choice').textContent);
+
+
+    </script>
 </body>
 </html>
