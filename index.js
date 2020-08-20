@@ -3,7 +3,7 @@
 // 外部JavaScriptファイル
 /*
 外部JavaScriptファイルは
-読み込まれたらすぐ実行されます。
+読み込まれたらすぐ実行されます
 */
 console.log('隣の客は');
 //単一行コメント
@@ -13,8 +13,18 @@ console.log('隣の客は');
 */
 
 'use strict'
+/*
+ダイアログボックスの書き方と、確認ダイアログボックスの条件分岐（IF文）の書き方。
+ダイアログボックスの書き方は下記の通り。
 
-//ダイアログボックスの書き方
+確認ダイアログボックスとは、ボックス内に選択肢が出力され、
+どちらをクリックしたかによって、動作を変えるコード。
+これには条件分岐（IF文）を使用する。
+まず、前半は、console.log()をつける。
+（　）内はwindowオブジェクトのalertメソッドの箇所を、
+confirmメソッドに変える。表示したいメッセージを記入する
+例　console.log(window.confirm('確認ダイアログボックスIF文'));
+*/
 
 window.alert('ダイアログボックス外部ファイルtest');
 
@@ -51,3 +61,19 @@ console.log(コード、文字列）をつけることで、
 */
 
 console.log(document.getElementById('choice').textContent);
+
+
+/*
+windowオブジェクトのconfirmメソッドのリターンの値は、
+true(成り立つ。OK)、false(成り立たない。キャンセル)という意味。ブール値。
+下記のIF文を使用した場合、確認ダイアログボックスの「OK]を
+クリックした場合「test開始」、「キャンセル」をクリックした場合
+「test終了」とコンソールに出力される。
+
+if(window.confirm('確認ダイアログボックス処理の振り分け。条件分岐（IF文）test')) {
+    console.log('test開始');
+    } else {
+        console.log('test終了');
+    }
+
+    */
