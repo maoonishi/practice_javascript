@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>タイトル</h1>
+            <h2>サブタイトル</h2>
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<p id="choice">ここに日時を表示します。</p>
+<p id="test">書き換えtest</p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+console.log('よく柿食う客だ');
+console.log(window.confirm('確認ダイアログボックスを表示。条件分岐（IF文）test'));
+console.log(document.getElementById('choice'));
+document.getElementById('choice').textContent = new Date();
+document.getElementById('test').textContent = ('通知を受け取る');
+console.log(document.getElementById('choice').textContent);
+if(window.confirm('確認ダイアログボックス処理の振り分け。条件分岐（IF文）test')) {
+console.log('test開始');
+} else {
+    console.log('test終了');
+}
+
+    </script>
+</body>
+</html>
