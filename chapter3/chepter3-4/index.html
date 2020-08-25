@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+const number = Math.floor(Math.random()*6);
+const answer = parseInt(window.prompt('数当てゲーム。０～５の数字を入力'));
+
+//letに続けて変数名「message」その後に「；」で、データを代入せず変数を定義だけする。
+let message;
+if(answer === number) {
+    message = '正解';
+} else if(answer < number) {
+    message = 'もっと大きい';
+} else if(answer > number) {
+    message = 'もっと小さい';
+} else{
+    message = '０～５の数字を入力';
+}
+window.alert(message);
+
+    </script>
+</body>
+</html>
