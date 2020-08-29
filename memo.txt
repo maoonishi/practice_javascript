@@ -1,0 +1,50 @@
+プルリクエストのフォーマット
+↓
+## 教材番号
+## やったこと
+## 理解したこと
+## 理解してない or 一旦飛ばしたこと
+## その他質問
+
+プルリクエスト名の書き方
+[ChapterX] StepXX やったこと
+
+
+Git bash でよく使うコマンド
+https://qiita.com/tailup0/items/32003455bfe99337641a
+
+Git コマンド参考集
+https://qiita.com/naoki_mochizuki/items/50e48c18908e493dfc75
+
+
+ブランチ作成からGitHabにpushまでの流れ
+cd Desktop ←デスクトップ表示宣言
+ls ←デスクトップ表示
+cd practice_javascript/ ←ファイルに入る
+git checkout master ←ブランチに移動
+git pull origin ←ソースコードを最新に
+暗証番号入力
+git checkout -b ブランチ名 ←ブランチ作成
+git branch ←現在入っているブランチ確認
+Visual Studio Codeを開く
+○○○○.jsのファイルに入る　例：index.js
+一行目は必ず console.log('ブランチ名')
+保存する（ctry＋S)
+Git Bashにもどる
+git add -A　←Visual Studio Codeでのファイルの変更履歴を仮確定
+git commit -m "文字列（なんでも可）" ←変更履歴の確定
+git push origin ブランチ名←GitHubのリモートにコードをPush
+暗証番号入力
+GitHubに入り、repositoryを開く
+ブランチを保存したrepositoryに入る
+ブランチがあることを確認し、Compare&pull requestする
+レビューに内容・変更点を記入
+Create pull requestする
+Reviewersで確認してもらう相手を選択
+確認後、修正を加える
+再レビュー
+masterにマージする （編集済み） 
+
+
+
+
