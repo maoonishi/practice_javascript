@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>タイトル</h1>
+            <h2>サブタイトル</h2>
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<p id="choice">ここに日時を表示します。</p>
+<p id="test">書き換えtest</p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+const hour = new Date().getHours();
+
+if(hour >= 2 && hour < 4){
+    window.alert('2時～4時までの表示');
+} else if(hour === 9 || hour === 15){
+    window.alert('9時または15時のときの表示');
+} else {
+    window.alert('それ以外の表示');
+}
+    </script>
+</body>
+</html>
