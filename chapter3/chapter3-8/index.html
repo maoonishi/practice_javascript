@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>タイトル</h1>
+            <h2>サブタイトル</h2>
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<p id="choice">ここに日時を表示します。</p>
+<p id="test">書き換えtest</p>
+<p id="output">ここに税込み価格を表示</p>
+<p id="output2">ここに税込み価格を表示</p>
+<p id="output3">ここに税込み価格を表示</p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+
+'use strict';
+
+function totar(price) {
+    const tax = 0.1;
+    return price + price * tax;
+}
+
+console.log('値段は'　+ totar(8000) + '円（税込）');
+console.log(document.getElementById('output'));
+document.getElementById('output').textContent = '値段は'　+ totar(8000) + '円（税込）';
+document.getElementById('output2').textContent = '値段は'　+ totar(200) + '円（税込）';
+document.getElementById('output3').textContent = '値段は'　+ totar(1000) + '円（税込）';
+
+    </script>
+</body>
+</html>
