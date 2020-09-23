@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<form action="#" id="form">
+    <input type="text" name="word"> 
+    <input type="submit" value="検索">
+</form>
+<p id="output"></p>
+
+<ul class="hidden">
+  <h2>登山データ</h2>
+<h3>伊吹山</h3>
+<li>標高: 1300m</li>
+<li>所在地: 滋賀県</li>
+<p id="ibuki"></p>
+</ul>
+
+<ul class="hidden">
+<h2>登山データ</h2>
+<h3>御在所岳</h3>
+<li>標高: 1200m</li>
+<li>所在地: 三重県</li>
+<p id="gozaisyo"></p>
+</ul>
+
+<ul class="hidden">
+<h2>登山データ</h2>
+<h3>八経ヶ岳</h3>
+<li>標高: 1915m</li>
+<li>所在地: 奈良県・和歌山県</li>
+<p id="hakkyou"></p>
+</ul>
+
+<ul class="hidden">
+<p>登山データが存在しませんでした。</p>
+<p id="sonota"></p>
+</ul>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+document.getElementById('form').onsubmit = function() {
+    event.preventDefault();
+const search = document.getElementById('form').word.value;
+document.getElementById('output').textContent = `「${search}」`;
+};
+
+
+
+
+
+    </script>
+</body>
+</html>
