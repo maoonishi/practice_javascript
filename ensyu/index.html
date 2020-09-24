@@ -22,9 +22,7 @@
 <form action="#" id="form">
     <input type="text" name="word"> 
     <input type="submit" value="検索">
-</form>
-<p id="output"></p>
-
+    
 <ul class="hidden">
   <h2>登山データ</h2>
 <h3>伊吹山</h3>
@@ -32,6 +30,7 @@
 <li>所在地: 滋賀県</li>
 <p id="ibuki"></p>
 </ul>
+<p id="output"></p>
 
 <ul class="hidden">
 <h2>登山データ</h2>
@@ -40,6 +39,7 @@
 <li>所在地: 三重県</li>
 <p id="gozaisyo"></p>
 </ul>
+<p id="output2"></p>
 
 <ul class="hidden">
 <h2>登山データ</h2>
@@ -48,11 +48,14 @@
 <li>所在地: 奈良県・和歌山県</li>
 <p id="hakkyou"></p>
 </ul>
+<p id="output3"></p>
 
 <ul class="hidden">
 <p>登山データが存在しませんでした。</p>
 <p id="sonota"></p>
 </ul>
+<p id="output4"></p>
+</form>
             </section>
         </div><!-- /.container -->
     </main>
@@ -67,14 +70,25 @@
 
 document.getElementById('form').onsubmit = function() {
     event.preventDefault();
-const search = document.getElementById('form').word.value;
-document.getElementById('output').textContent = `「${search}」`;
+    const search = document.getElementById('form').word.value;
+
+function getMountainDataHtml() {
+    let data;
+if('伊吹山') {
+    data = ibuki;
+} else if('御在所岳') {
+    data = gozaisyo;
+} else if('八経ヶ岳') {
+    data = hakkyou;
+} else if('武奈ヶ岳') {
+    data = sonota;
+}
 };
-
-
-
-
-
+document.getElementById('output').textContent = ibuki;
+document.getElementById('output2').textContent = gozaisyo;
+document.getElementById('output3').textContent = hakkyou;
+document.getElementById('output4').textContent = sonota;
+}
     </script>
 </body>
 </html>
