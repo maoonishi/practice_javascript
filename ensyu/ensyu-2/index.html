@@ -34,24 +34,24 @@
 document.getElementById('form').onsubmit = function() {
         event.preventDefault();
         const search = document.getElementById('form').word.value;
-    let keisyumenuDataHTML = getkeisyumenuDataHTML(search);
-    document.getElementById('output').innerHTML = keisyumenuDataHTML;
+    let keisyuMenuDataHTML = getkeisyuMenuDataHTML(search);
+    document.getElementById('output').innerHTML = keisyuMenuDataHTML;
 };
 
-function getkeisyumenuDataHTML(search) {
+function getkeisyuMenuDataHTML(search) {
     let menuData = '';
     if(search === 'ユッケ') {
-        menuData += `<h2>ユッケ</h2>・価格：990円`;
-    } else if(search ===　'和風ユッケ') {
-        menuData +=`<h2>和風ユッケ</h2>・価格：1100円`
-    } else　if(search ===　'生センマイ') {
-        menuData +=`<h2>生センマイ</h2>・価格：650円`
-    } else if(search ===　'タン刺') {
-        menuData +=`<h2>タン刺</h2>・価格：1500円`
-    } else if(search ===　'ハラミ刺') {
-        menuData +=`<h2>ハラミ刺</h2>・価格：1480円`
-    } else if(search ===　'イカフェ') {
-        menuData +=`<h2>イカフェ</h2>・価格：580円`
+        menuData += `<h2>ユッケ</h2><h3>・価格：980円</h3>`;
+    } else if(search === '和風ユッケ') {
+        menuData +=`<h2>和風ユッケ</h2><h3>・価格：1100円</h3>`
+    } else　if(search === '生センマイ') {
+        menuData +=`<h2>生センマイ</h2><h3>・価格：650円</h3>`
+    } else if(search === 'タン刺') {
+        menuData +=`<h2>タン刺</h2><h3>・価格：1500円</h3>`
+    } else if(search === 'ハラミ刺') {
+        menuData +=`<h2>ハラミ刺</h2><h3>・価格：1480円</h3>`
+    } else if(search === 'イカフェ') {
+        menuData +=`<h2>イカフェ</h2><h3>・価格：580円</h3>`
     } else {
         menuData +=`<p>メニューが存在しません。</p>`;
     }
