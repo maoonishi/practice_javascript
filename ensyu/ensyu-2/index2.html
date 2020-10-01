@@ -8,7 +8,7 @@
 <body>
     <header>
         <div class="container">
-           
+            
         </div><!-- /.container -->
     </header>
     <main>
@@ -23,7 +23,7 @@
         </div><!-- /.container -->
     </main>
     <footer>
-        <div class="container">
+        <div class="container"
             <p>JavaScript Samples</p>
         </div><!-- /.container -->
     </footer>
@@ -32,30 +32,22 @@
 'use strict';
 
 document.getElementById('form').onsubmit = function() {
-        event.preventDefault();
-        const search = document.getElementById('form').word.value;
+    event.preventDefault();
+    const search = document.getElementById('form').word.value;
     let keisyuMenuDataHTML = getkeisyuMenuDataHTML(search);
     document.getElementById('output').innerHTML = keisyuMenuDataHTML;
 };
 
 function getkeisyuMenuDataHTML(search) {
     let menuData = '';
-    if(search === 'ユッケ') {
-        menuData += `<h2>ユッケ</h2><h3>・価格：980円</h3>`;
-    } else if(search === '和風ユッケ') {
-        menuData +=`<h2>和風ユッケ</h2><h3>・価格：1100円</h3>`
-    } else if(search === '生センマイ') {
-        menuData +=`<h2>生センマイ</h2><h3>・価格：650円</h3>`
-    } else if(search === 'タン刺') {
-        menuData +=`<h2>タン刺</h2><h3>・価格：1500円</h3>`
-    } else if(search === 'ハラミ刺') {
-        menuData +=`<h2>ハラミ刺</h2><h3>・価格：1480円</h3>`
-    } else if(search === 'イカフェ') {
-        menuData +=`<h2>イカフェ</h2><h3>・価格：580円</h3>`
+    if(search === 'キムチ') {
+        menuData += `<h2>・各種価格：380円</h2><h3>・白菜キムチ</h3><h3>・大根キムチ</h3><h3>・オイキムチ</h3><h3>・盛り合わせ(700円)</h3>`;
+    } else if(search === 'ナムル') {
+       menuData +=`<h2>・各種：300円</h2><h3>・もやし</h3><h3>・ほうれん草<h3/><h3>・大根</h3><h3>・ゼンマイ</h3><h3>・盛り合わせ(480円)</h3>`;
     } else {
-        menuData +=`<p>メニューが存在しません。</p>`;
-    }
-    return menuData;
+    menuData +=`<p>メニューが存在しません。</p>`;
+}
+return menuData;
 }
     </script>
 </body>
