@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>登山データ</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section>
+                <form action="#" id="form">
+                    <input type="text" name="word">
+                    <input type="submit" value="検索">
+                </form>
+                <div id="output"></div>
+            </section>
+        </div>
+    </main>
+    <script>
+        'use strict';
+        document.getElementById('form').onsubmit = function() {
+        event.preventDefault();
+        let search = document.getElementById('form').word.value;
+        let mountainDataHtml = getMountainDataHtml(search);
+        document.getElementById('output').innerHTML = mountainDataHtml;
+        };
+        
+        function getMountainDataHtml(inputValue) {
+            let moutainDataConst = getMountainDataConst();
+            let responseData = '';
+            if (moutainDataConst[inputValue]) {
+                responseData += `<h2>登山データ</h2><h3>${inputValue}</h3><ul>`;
+                for (let key in moutainDataConst[inputValue]) {
+                    responseData += `<li>${key}: ${moutainDataConst[inputValue][key]}</li>`;
+                }
+                responseData += `</ul>`;
+            } else {
+                responseData += '<p>登山データが存在しませんでした。</p>'
+            }
+            return responseData;
+        }
+        function getMountainDataConst() {
+            return {
+                    '伊吹山': {
+                        '標高': '1300m',
+                        '所在地': '滋賀県',
+                    },
+                    '御在所岳': {
+                        '標高': '1200m',
+                        '所在地': '三重県',
+                    },
+                    '八経ヶ岳': {
+                        '標高': '1915m',
+                        '所在地': '奈良県・和歌山県',
+                    },
+                }
+        }
+    </script>
+</body>
+</html>

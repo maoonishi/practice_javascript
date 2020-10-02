@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<form action="#" id="form">
+    <input type="text" name="word">
+    <input type="submit" value="検索">
+</form>
+<p id="output"></p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+document.getElementById('form').onsubmit = function() {
+        event.preventDefault();
+        const search = document.getElementById('form').word.value;
+    let keisyuMenuDataHTML = getkeisyuMenuDataHTML(search);
+    document.getElementById('output').innerHTML = keisyuMenuDataHTML;
+};
+
+function getkeisyuMenuDataHTML(search) {
+    let menuData = '';
+    if(search === 'ユッケ') {
+        menuData += `<h2>ユッケ</h2><h3>・価格：980円</h3>`;
+    } else if(search === '和風ユッケ') {
+        menuData +=`<h2>和風ユッケ</h2><h3>・価格：1100円</h3>`
+    } else if(search === '生センマイ') {
+        menuData +=`<h2>生センマイ</h2><h3>・価格：650円</h3>`
+    } else if(search === 'タン刺') {
+        menuData +=`<h2>タン刺</h2><h3>・価格：1500円</h3>`
+    } else if(search === 'ハラミ刺') {
+        menuData +=`<h2>ハラミ刺</h2><h3>・価格：1480円</h3>`
+    } else if(search === 'イカフェ') {
+        menuData +=`<h2>イカフェ</h2><h3>・価格：580円</h3>`
+    } else {
+        menuData +=`<p>メニューが存在しません。</p>`;
+    }
+    return menuData;
+}
+    </script>
+</body>
+</html>

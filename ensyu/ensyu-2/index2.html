@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+<form action="#" id="form">
+    <input type="text" name="word">
+    <input type="submit" value="検索">
+</form>
+<p id="output"></p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container"
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+document.getElementById('form').onsubmit = function() {
+    event.preventDefault();
+    const search = document.getElementById('form').word.value;
+    let keisyuMenuDataHTML = getkeisyuMenuDataHTML(search);
+    document.getElementById('output').innerHTML = keisyuMenuDataHTML;
+};
+
+function getkeisyuMenuDataHTML(search) {
+    let menuData = '';
+    if(search === 'キムチ') {
+        menuData += `<h2>・各種価格：380円</h2><h3>・白菜キムチ</h3><h3>・大根キムチ</h3><h3>・オイキムチ</h3><h3>・盛り合わせ(700円)</h3>`;
+    } else if(search === 'ナムル') {
+       menuData +=`<h2>・各種：300円</h2><h3>・もやし</h3><h3>・ほうれん草<h3/><h3>・大根</h3><h3>・ゼンマイ</h3><h3>・盛り合わせ(480円)</h3>`;
+    } else {
+    menuData +=`<p>メニューが存在しません。</p>`;
+}
+return menuData;
+}
+    </script>
+</body>
+</html>
