@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>計算機</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+
+          <form>
+             <label for="textForm1">数値1: </label>
+             <input type="text" id="textForm1">
+
+             <label for="textForm2">数値2:</label>
+             <input type="text" id="textForm2">
+
+             <button id="button1">+</button>
+             <button id="button2">-</button>
+             <button id="button3">*</button>
+             <button id="button4">/</button>
+          </form>
+                
+                <input type="text" id="output">
+
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+let button1 = document.getElementById("button1");
+let button2 = document.getElementById("button2");
+let button3 = document.getElementById("button3");
+let button4 = document.getElementById("button4");
+
+button1.addEventListener("click", function(e1) {
+  e1.preventDefault();
+let textForm1 = document.getElementById("textForm1").value;
+let textForm2 = document.getElementById("textForm2").value;
+
+let sum1 = parseInt(textForm1, 10) + parseInt(textForm2, 10);
+
+let output = document.getElementById("output");
+output.value = sum1;
+});
+
+button2.addEventListener("click", function(e2) {
+  e2.preventDefault();
+let textForm1 = document.getElementById("textForm1").value;
+let textForm2 = document.getElementById("textForm2").value;
+
+let sum2 = parseInt(textForm1, 10) - parseInt(textForm2, 10);
+
+let output = document.getElementById("output");
+output.value = sum2;
+});
+
+button3.addEventListener("click", function(e3) {
+  e3.preventDefault();
+let textForm1 = document.getElementById("textForm1").value;
+let textForm2 = document.getElementById("textForm2").value;
+
+let sum3 = parseInt(textForm1, 10) * parseInt(textForm2, 10);
+
+let output = document.getElementById("output");
+output.value = sum3;
+});
+
+button4.addEventListener("click", function(e4) {
+  e4.preventDefault();
+let textForm1 = document.getElementById("textForm1").value;
+let textForm2 = document.getElementById("textForm2").value;
+
+let sum4 = parseInt(textForm1, 10) / parseInt(textForm2, 10);
+
+let output = document.getElementById("output");
+output.value = sum4;
+});
+    </script>
+</body>
+</html>
