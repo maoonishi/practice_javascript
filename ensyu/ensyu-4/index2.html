@@ -117,6 +117,106 @@ if (num4 === 19 && num5 === 4) {
 };
 
 //11
+let num6 = 20
+let num7 = 200
+
+if(num6 <= 21 || num7 >= 201) {
+    console.log('どちらか、もしくは両方正解')
+} else {
+    console.log('どちらも残念')
+};
+
+//12
+const now = new Date();
+const hour = now.getHours();
+
+let ampm = '';
+if(hour < 12) {
+   console.log(ampm = 'am');
+} else {
+   console.log(ampm = 'pm');
+};
+
+//13
+
+const month = now.getMonth();
+
+let tuki = '';
+if(month + 1 <= 6) {
+    console.log(tuki = '1~6月');
+} else {
+    console.log(tuki = '7~12月');
+}
+
+//14
+const date = now.getDate();
+
+if(date % 3 === 0 && date % 5 === 0) {
+    console.log('3と5で割り切れる日');
+} else {
+    console.log('3と5で割り切れない日');
+}
+
+//15
+if (date % 2 === 0 || date % 7 === 0) {
+    console.log('2もしくは7で割り切れる日');
+} else if(date % 3 === 0 || date % 5 === 0) {
+    console.log('3もしくは5で割り切れる日');
+} else {
+    console.log('2,3,5,7で割り切れない日');
+}
+
+//16
+if(4 % 2 === 1) {
+    console.log('余りが出る');
+} else {
+    console.log('余りが出ない');
+}
+
+//17
+const day = now.getDay();
+
+let youbi = '';
+if(day === 0 || day === 1) {
+    console.log(youbi = '日曜か月曜');
+} else if(day === 2 || day === 3) {
+    console.log(youbi = '火曜か水曜');
+} else if(day === 4 || day === 5) {
+    console.log(youbi = '木曜か金曜');
+} else {
+    console.log(youbi = '土曜');
+}
+
+//18
+
+if(day <= 3) {
+    console.log('日曜か月曜か火曜か水曜');
+} else {
+    console.log('木曜か金曜か土曜');
+}
+
+//19
+
+const min = now.getMinutes();
+
+let hun = '';
+if(min <= 20) {
+    console.log(hun = '1~20分');
+} else if(min >= 20 && min <= 40) {
+    console.log(hun = '20~40分');
+} else {
+    console.log(hun = '40分以降');
+}
+
+//20
+
+if(month + 1 === 10 && date <= 15) {
+    console.log('今月15日以下');
+} else {
+    console.log('今月15日以上');
+}
+
+//21
 
 
     </script>

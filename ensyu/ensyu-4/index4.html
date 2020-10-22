@@ -27,8 +27,32 @@
     <script>
 'use strict';
 // if文とfor文の組み合わせ50個作成
+//1
+let num = 0;
 
+if(num === 5) {
+  for(let i = 0; i <= 5; i++) {
+      console.log(i);
+  }  
+} else {
+    for(let a = 0; a <= 3; a++) {
+        console.log(a);
+    }
+}
 
+//2
+let num1 = 7+5;
+let num2 = 7*5;
+let num3 = 7-5;
+
+if(num1 === 12 && num2 === 35 && num3 === 2) {
+    let a = ['答え1は12','答え2は35','答え3は2'];
+    for(let i = 0; i < a.length; i++) {
+        console.log(a[i]);
+    }
+} else {
+    console.log('不正解');
+}
 
     </script>
 </body>
