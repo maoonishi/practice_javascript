@@ -217,8 +217,83 @@ if(month + 1 === 10 && date <= 15) {
 }
 
 //21
+/*
+const answer = window.prompt('abcde');
+if (answer === 'yes') {
+    window.alert('yesの場合');
+} else if (answer === 'no') {
+    window.alert('noの場合');
+} else {
+    window.alert('それ以外の場合')
+}
+*/
+//22
 
+const num8 = Math.floor(Math.random() * 6);
+if (num8 === 3) {
+    console.log('3の場合');
+} else if (num8 <= 2) {
+    console.log('2以下の場合');
+} else {
+    console.log('4以上の場合');
+}
 
+//23
+
+if (num8 + 3 === 8) {
+    console.log('答えが8になる場合');
+} else if (num8 + 3 >= 5) {
+    console.log('答えが5以上の時');
+} else {
+    console.log('それ以外');
+}
+
+//24
+
+if (num8 + 5 === 10 || num8 === 5) {
+    console.log('答えが5もしくは10');
+} else if (num8 === 3 || num8 + 2 === 6 || num8 +7 === 9) {
+    console.log('答えが3or6or9のとき');
+} else {
+    console.log('それ以外');
+}
+
+//25
+
+const num9 = Math.floor(Math.random() * 11);
+if (num8 === num9) {
+    console.log('数字が同じとき');
+} else if (num8 !== num9) {
+    console.log('数字が同じでないとき');
+}
+
+//26
+
+if (num8 < num9) {
+    console.log('num8がnum9より小さい');
+} else if (num8 > num9) {
+    console.log('num8がnum9より大きい');
+} else if (num8 === num9) {
+    console.log('num8とnum9が同じ')
+}
+
+//27
+
+if (num8 <= num9 - 5 || num8 === num9 - 5) {
+    console.log('num8がnum9より小さい。もしくは同じ');
+} else if (num8 + 5 >= num9 && num9 >= 5) {
+    console.log('num8がnum9より大きい。かつnum9が5以上');
+} else {
+    console.log('それ以外');
+}
+
+//28
+
+if (num8 + 5 / num9 >= 2 && num8 + 5 / num9 <= 5) {
+    console.log('num8割るnum9が2以上5以下');
+} else {
+    console.log('それ以外');
+}
     </script>
 </body>
 </html>

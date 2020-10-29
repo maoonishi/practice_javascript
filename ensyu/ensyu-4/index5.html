@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>ルーレット</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+              <form action="#" id="form">
+                <input type="submit" value="ルーレット">
+              </form>  
+                 
+              <p id="output"></p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+document.getElementById('form').onclick = function() {
+    const roulette = Math.floor(Math.random() * 7) +1;
+    document.getElementById('output').textContent = roulette + '日後まで';
+}
+
+    </script>
+</body>
+</html>
