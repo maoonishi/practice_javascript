@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>if文とfor文の組み合わせ50個作成</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+// if文とfor文の組み合わせ50個作成
+//1
+let num = 0;
+
+if(num === 5) {
+  for(let i = 0; i <= 5; i++) {
+      console.log(i);
+  }  
+} else {
+    for(let a = 0; a <= 3; a++) {
+        console.log(a);
+    }
+}
+
+//2
+let num1 = 7+5;
+let num2 = 7*5;
+let num3 = 7-5;
+
+if(num1 === 12 && num2 === 35 && num3 === 2) {
+    let a = ['答え1は12','答え2は35','答え3は2'];
+    for(let i = 0; i < a.length; i++) {
+        console.log(a[i]);
+    }
+} else {
+    console.log('不正解');
+}
+
+//3
+
+let earth = ['山','川','海','町'];
+for(let i = 0; i <= 3; i++) {
+    if(i >= 2 && i < 4) {
+        console.log(earth[i]);
+    }
+}
+
+//4
+
+let abc = ['あ','い','う','え','お'];
+for (let i = 0; i <= 4; i++) {
+    if (i >= 4) {
+        console.log(abc[i]);
+    } else if (i >=  2 && i < 4) {
+        console.log(abc[i]);
+    }
+}
+
+//5
+
+
+</script>
+</body>
+</html>

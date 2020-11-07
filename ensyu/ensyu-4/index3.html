@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>for文を50個作成</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+// for文を50個作成
+//1
+         let todo = ['aaa','bbb','ccc',];
+    for(let item of todo) {
+         console.log(item);
+
+     }
+//2
+let jsbook = {title: 'JavaScript',price: 2500, stock: 3};
+
+for(let p in jsbook) {
+    console.log(p + '=' + jsbook[p]);
+}
+
+//3
+
+for(let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+//4
+const now = new Date();
+const month = now.getMonth();
+const date = now.getDate();
+let a = [month +1 , '/' , date]
+for(let b of a) {
+    console.log(a);
+}
+
+//5
+
+let aiueo = ['あ','い','う','え','お'];
+
+for(let i = 0; i < aiueo.length; i++) {
+    console.log(aiueo[i]);
+}
+
+//6
+
+for(let i = 0; i <= 5; i++) {
+    console.log('//' + i);
+
+    for(let a = 6; a <= 10; a++) {
+        console.log(a);
+    }
+    console.log('');
+}
+
+//7
+for(let i = 0; i < aiueo.length; i++) {
+    console.log('・' + aiueo[i]);
+
+    for(let a = 1; a <= 3; a++) {
+        console.log(a);
+    }
+    console.log('');
+}
+
+//8
+
+
+
+    </script>
+</body>
+</html>

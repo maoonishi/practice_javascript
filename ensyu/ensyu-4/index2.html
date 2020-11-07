@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>if文を50個作成</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+<script>
+    'use strict';
+// if文を50個作成(比較演算子を使用する。)
+//1
+      let num = 90;
+
+    if(num === 90) {
+    console.log('OK')
+    } else {
+    console.log('NO')    
+    };
+
+//2
+const aaa = 'ccc';
+
+if(aaa !== 'ccc') {
+    console.log('変数aaaとcccは同じではない')
+} else {
+    console.log('変数aaaとcccは同じ')
+};
+
+//3
+let num2 = 5*6;
+
+if(num2 === 25) {
+    console.log('正解')
+} else if(num2 < 26) {
+    console.log('26より小さい')
+} else {
+    console.log('26より大きい')
+};
+
+//4
+if(10 > 5) {
+    console.log('10は5より大きい') 
+} else {
+    console.log('10は5より小さい')
+};
+
+//5
+if(5 >= 3) {
+    console.log('右は左より小さいか同じ')
+} else {
+    console.log('右は左より大きい')
+};
+
+//6
+if(5 <= 3) {
+    console.log('右は左より大きいか同じ')
+} else {
+    console.log('右は左より小さい')
+};
+
+//7
+let abc = 2+2;
+let def = 2-2;
+
+if(abc === 4 && def === 0) {
+    console.log('正解')
+} else {
+    console.log('残念')
+};
+
+//8
+let ghi = 2*2
+let jkl = 2/2
+
+if(ghi === 4 || jkl === 1) {
+    console.log('どちらか、もしくは両方正解')
+} else {
+    console.log('どちらも残念')
+};
+
+//9
+if(!(4*5 === 19)) {
+    console.log('残念')
+} else {
+    console.log('正解')
+};
+
+//10
+let num4 = 7+3;
+let num5 = 7-3;
+
+if (num4 === 19 && num5 === 4) {
+    console.log('どちらも正解')
+} else if(num4 === 5 || num5 === 2) {
+    console.log('どちらか正解')
+} else {
+    console.log('どちらも残念')
+};
+
+//11
+let num6 = 20
+let num7 = 200
+
+if(num6 <= 21 || num7 >= 201) {
+    console.log('どちらか、もしくは両方正解')
+} else {
+    console.log('どちらも残念')
+};
+
+//12
+const now = new Date();
+const hour = now.getHours();
+
+let ampm = '';
+if(hour < 12) {
+   console.log(ampm = 'am');
+} else {
+   console.log(ampm = 'pm');
+};
+
+//13
+
+const month = now.getMonth();
+
+let tuki = '';
+if(month + 1 <= 6) {
+    console.log(tuki = '1~6月');
+} else {
+    console.log(tuki = '7~12月');
+}
+
+//14
+const date = now.getDate();
+
+if(date % 3 === 0 && date % 5 === 0) {
+    console.log('3と5で割り切れる日');
+} else {
+    console.log('3と5で割り切れない日');
+}
+
+//15
+if (date % 2 === 0 || date % 7 === 0) {
+    console.log('2もしくは7で割り切れる日');
+} else if(date % 3 === 0 || date % 5 === 0) {
+    console.log('3もしくは5で割り切れる日');
+} else {
+    console.log('2,3,5,7で割り切れない日');
+}
+
+//16
+if(4 % 2 === 1) {
+    console.log('余りが出る');
+} else {
+    console.log('余りが出ない');
+}
+
+//17
+const day = now.getDay();
+
+let youbi = '';
+if(day === 0 || day === 1) {
+    console.log(youbi = '日曜か月曜');
+} else if(day === 2 || day === 3) {
+    console.log(youbi = '火曜か水曜');
+} else if(day === 4 || day === 5) {
+    console.log(youbi = '木曜か金曜');
+} else {
+    console.log(youbi = '土曜');
+}
+
+//18
+
+if(day <= 3) {
+    console.log('日曜か月曜か火曜か水曜');
+} else {
+    console.log('木曜か金曜か土曜');
+}
+
+//19
+
+const min = now.getMinutes();
+
+let hun = '';
+if(min <= 20) {
+    console.log(hun = '1~20分');
+} else if(min >= 20 && min <= 40) {
+    console.log(hun = '20~40分');
+} else {
+    console.log(hun = '40分以降');
+}
+
+//20
+
+if(month + 1 === 10 && date <= 15) {
+    console.log('今月15日以下');
+} else {
+    console.log('今月15日以上');
+}
+
+//21
+/*
+const answer = window.prompt('abcde');
+if (answer === 'yes') {
+    window.alert('yesの場合');
+} else if (answer === 'no') {
+    window.alert('noの場合');
+} else {
+    window.alert('それ以外の場合')
+}
+*/
+//22
+
+const num8 = Math.floor(Math.random() * 6);
+if (num8 === 3) {
+    console.log('3の場合');
+} else if (num8 <= 2) {
+    console.log('2以下の場合');
+} else {
+    console.log('4以上の場合');
+}
+
+//23
+
+if (num8 + 3 === 8) {
+    console.log('答えが8になる場合');
+} else if (num8 + 3 >= 5) {
+    console.log('答えが5以上の時');
+} else {
+    console.log('それ以外');
+}
+
+//24
+
+if (num8 + 5 === 10 || num8 === 5) {
+    console.log('答えが5もしくは10');
+} else if (num8 === 3 || num8 + 2 === 6 || num8 +7 === 9) {
+    console.log('答えが3or6or9のとき');
+} else {
+    console.log('それ以外');
+}
+
+//25
+
+const num9 = Math.floor(Math.random() * 11);
+if (num8 === num9) {
+    console.log('数字が同じとき');
+} else if (num8 !== num9) {
+    console.log('数字が同じでないとき');
+}
+
+//26
+
+if (num8 < num9) {
+    console.log('num8がnum9より小さい');
+} else if (num8 > num9) {
+    console.log('num8がnum9より大きい');
+} else if (num8 === num9) {
+    console.log('num8とnum9が同じ')
+}
+
+//27
+
+if (num8 <= num9 - 5 || num8 === num9 - 5) {
+    console.log('num8がnum9より小さい。もしくは同じ');
+} else if (num8 + 5 >= num9 && num9 >= 5) {
+    console.log('num8がnum9より大きい。かつnum9が5以上');
+} else {
+    console.log('それ以外');
+}
+
+//28
+
+if (num8 + 5 / num9 >= 2 && num8 + 5 / num9 <= 5) {
+    console.log('num8割るnum9が2以上5以下');
+} else {
+    console.log('それ以外');
+}
+
+//29
+
+if(num8 + 5 - num9 >= 2) {
+    console.log('num8 - num9が2以上');
+} else {
+    console.log('それ以外');
+}
+
+//30
+
+if(num8 + num9 >= 8 && num8 + num9 <= 12) {
+    console.log('答えが8以上12以下');
+} else if (num8 === 4 || num9 === 7) {
+    console.log('答えが4もしくは7');
+} else if (num8 + num9 >= 1 && num8 + num9 <= 10) {
+    console.log('答えが1以上10以下');
+} else {
+    console.log('それ以外');
+}
+
+//31
+
+    let max = Math.max(1,2,3,4,5);
+    let mathmin = Math.min(6,7,8,9,10);
+
+    if(max === 5 && mathmin === 6) {
+        console.log('最大値は5');
+        console.log('最小値は6');
+    } else {
+        console.log('それ以外');
+    }
+    
+    //32
+
+    if(max <= 6) {
+        console.log('最大値は6より小さい');
+    } else {
+        console.log('それ以外');
+    }
+
+    //33
+ //num8は１～５のランダム
+    if(max + num8 <= 7) {
+        console.log('答えが7より小さい');
+    } else if(max + num8 === 8) {
+        console.log('答えが8')
+    } else {
+        console.log('それ以外');
+    }
+    
+    //34
+
+    if(max + num8 <= 9 && max + num8 >= 7) {
+        console.log('答えが7以上9以下');
+    } else if (max + num8 === 10) {
+        console.log('答えが10');
+    } else {
+        console.log('それ以外');
+    }
+
+    //35
+
+    if(max + num9 >= mathmin + num8) {
+        console.log('maxがmathminより大きい');
+    } else {
+        console.log('maxがmathminより小さい');
+    }
+
+    //36
+
+    if(max + num9 === 8 || mathmin + num8 === 11) {
+        console.log('maxが8の場合もしくはmathminが11の時');
+    } else {
+        console.log('それ以外');
+    }
+
+    //37
+
+    if(max === num9 || mathmin === num8) {
+        console.log('maxとnum9が同じもしくはmathminとnum8が同じ');
+    } else {
+        console.log('それ以外');
+    }
+
+    //38
+    
+    if(max >= num9 && max <= num8) {
+        console.log('maxがnum9より大きいかつmaxがnum8より小さい');
+    } else if (max + num8 <= 8) {
+        console.log('maxが8より小さい');
+    } else {
+        console.log('それ以外');
+    }
+
+    //39
+
+    if(max + mathmin <= num8 + num9) {
+        console.log('maxがnumより小さい');
+    } else if (max === num8) {
+        console.log('maxがnumと同じ');
+    } else {
+        console.log('それ以外');
+    }
+    
+    //40
+
+    const sec = now.getSeconds();
+    
+    if(sec <= 30 ) {
+        console.log('30秒以内');
+    } else {
+        console.log('30秒以上');
+    }
+
+    //41
+    console.log(sec);
+    if (sec >= 1 && sec <= 20) {
+        console.log('1~20');
+    } else if (sec >=21 && sec <= 40) {
+        console.log('21~40');
+    } else {
+        console.log('41~60');
+    }
+        
+    //42
+
+    if (sec <= 20 || sec >= 40) {
+        console.log('20以下もしくは40以上');
+    } else if (sec === 34 || sec === 35 || sec === 36) {
+        console.log('34~36');
+    } else {
+        console.log('他');
+    }
+
+    //43
+
+    
+
+</script>
+</body>
+</html>

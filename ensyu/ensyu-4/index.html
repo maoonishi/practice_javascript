@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>掛け算表</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <table id="kuku"></table>
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+           
+        </div><!-- /.container -->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+'use strict';
+
+        let tbl = document.getElementById("kuku");
+             
+            //iが9より小さい限り繰り返す
+        for (let i = 1; i <= 9; i++) {
+            //新しい行を挿入
+            let yoko = tbl.insertRow(-1);
+
+            for (let a = 1; a <= 9; a++) {
+                //新しいセルを挿入
+                let tate = yoko.insertCell(-1);
+
+                let kake = i*a;
+                tate.textContent = kake;
+            }    
+        }
+
+    </script>
+</body>
+</html>
