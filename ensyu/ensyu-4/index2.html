@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -24,8 +24,8 @@
         </div><!-- /.container -->
     </footer>
     <script src="index.js"></script>
-    <script>
-'use strict';
+<script>
+    'use strict';
 // if文を50個作成(比較演算子を使用する。)
 //1
       let num = 90;
@@ -294,6 +294,145 @@ if (num8 + 5 / num9 >= 2 && num8 + 5 / num9 <= 5) {
 } else {
     console.log('それ以外');
 }
-    </script>
+
+//29
+
+if(num8 + 5 - num9 >= 2) {
+    console.log('num8 - num9が2以上');
+} else {
+    console.log('それ以外');
+}
+
+//30
+
+if(num8 + num9 >= 8 && num8 + num9 <= 12) {
+    console.log('答えが8以上12以下');
+} else if (num8 === 4 || num9 === 7) {
+    console.log('答えが4もしくは7');
+} else if (num8 + num9 >= 1 && num8 + num9 <= 10) {
+    console.log('答えが1以上10以下');
+} else {
+    console.log('それ以外');
+}
+
+//31
+
+    let max = Math.max(1,2,3,4,5);
+    let mathmin = Math.min(6,7,8,9,10);
+
+    if(max === 5 && mathmin === 6) {
+        console.log('最大値は5');
+        console.log('最小値は6');
+    } else {
+        console.log('それ以外');
+    }
+    
+    //32
+
+    if(max <= 6) {
+        console.log('最大値は6より小さい');
+    } else {
+        console.log('それ以外');
+    }
+
+    //33
+ //num8は１～５のランダム
+    if(max + num8 <= 7) {
+        console.log('答えが7より小さい');
+    } else if(max + num8 === 8) {
+        console.log('答えが8')
+    } else {
+        console.log('それ以外');
+    }
+    
+    //34
+
+    if(max + num8 <= 9 && max + num8 >= 7) {
+        console.log('答えが7以上9以下');
+    } else if (max + num8 === 10) {
+        console.log('答えが10');
+    } else {
+        console.log('それ以外');
+    }
+
+    //35
+
+    if(max + num9 >= mathmin + num8) {
+        console.log('maxがmathminより大きい');
+    } else {
+        console.log('maxがmathminより小さい');
+    }
+
+    //36
+
+    if(max + num9 === 8 || mathmin + num8 === 11) {
+        console.log('maxが8の場合もしくはmathminが11の時');
+    } else {
+        console.log('それ以外');
+    }
+
+    //37
+
+    if(max === num9 || mathmin === num8) {
+        console.log('maxとnum9が同じもしくはmathminとnum8が同じ');
+    } else {
+        console.log('それ以外');
+    }
+
+    //38
+    
+    if(max >= num9 && max <= num8) {
+        console.log('maxがnum9より大きいかつmaxがnum8より小さい');
+    } else if (max + num8 <= 8) {
+        console.log('maxが8より小さい');
+    } else {
+        console.log('それ以外');
+    }
+
+    //39
+
+    if(max + mathmin <= num8 + num9) {
+        console.log('maxがnumより小さい');
+    } else if (max === num8) {
+        console.log('maxがnumと同じ');
+    } else {
+        console.log('それ以外');
+    }
+    
+    //40
+
+    const sec = now.getSeconds();
+    
+    if(sec <= 30 ) {
+        console.log('30秒以内');
+    } else {
+        console.log('30秒以上');
+    }
+
+    //41
+    console.log(sec);
+    if (sec >= 1 && sec <= 20) {
+        console.log('1~20');
+    } else if (sec >=21 && sec <= 40) {
+        console.log('21~40');
+    } else {
+        console.log('41~60');
+    }
+        
+    //42
+
+    if (sec <= 20 || sec >= 40) {
+        console.log('20以下もしくは40以上');
+    } else if (sec === 34 || sec === 35 || sec === 36) {
+        console.log('34~36');
+    } else {
+        console.log('他');
+    }
+
+    //43
+
+    
+
+</script>
 </body>
 </html>

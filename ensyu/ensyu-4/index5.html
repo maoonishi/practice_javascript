@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -19,6 +19,7 @@
               </form>  
                  
               <p id="output"></p>
+              <p id="output2"></p>
             </section>
         </div><!-- /.container -->
     </main>
@@ -29,13 +30,17 @@
     </footer>
     <script src="index.js"></script>
     <script>
-'use strict';
+        'use strict';
 
-document.getElementById('form').onclick = function() {
-    const roulette = Math.floor(Math.random() * 7) +1;
-    document.getElementById('output').textContent = roulette + '日後まで';
-}
+        document.getElementById('form').onclick = function() {
+            const roulette = Math.floor(Math.random() * (7 - 4) + 4) +1;
+            document.getElementById('output').textContent = roulette + '日後まで';
 
+            let batu = ['1','2','3','4','5','6','7','8','9','10'];
+            let num = Math.floor(Math.random() * 9);
+            document.getElementById('output2').textContent = '罰' + batu[num];
+        }
+        
     </script>
 </body>
 </html>
