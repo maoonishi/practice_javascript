@@ -1,0 +1,33 @@
+h3 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.output {
+    margin: 16px auto;
+    text-align: center;
+    display: block;
+}
+.output ul {
+    padding-left: 0;
+    display: inline-block;
+}
+.output ul li {
+    text-align: left;
+    height: 50px;
+}
+
+
+
+
+/* li { 
+    text-align: center;
+    height: 50px;
+    }*/
+   
+/* li { 
+        margin: 16px auto;
+        display: block;
+        padding-left: 0;
+    } */
