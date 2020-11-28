@@ -15,9 +15,11 @@ function getRecipeDateHtml(inputValue) {
 
         for (let key in recipeDateConst[inputValue]) {
             responseData += `<h3>${key}</h3>`;
+            responseData += '<ul>';
             for(let key2 in recipeDateConst[inputValue][key]) {
                 responseData += `<li>${key2}:${recipeDateConst[inputValue][key][key2]}</li>`
             }
+            responseData += '</ul>';
         }
 
     } else {
@@ -41,7 +43,7 @@ function getRecipeDateConst() {
                 '(2)ダシダ':'小さじ4(ほんだし&中華だし各小さじ２でも可)',
                  },
             '☆、登山前下準備':{
-                'step1':'今回は練習がてらメスティンでお米を炊飯してほしいので、あらかじめ登山前にお米を水筒などに入れて水に浸しておく。',
+                'step1':'今回は練習がてらメスティンでお米を炊飯してほしいので、<br>あらかじめ登山前にお米を水筒などに入れて水に浸しておく。',
                 'step2':'玉ねぎをcutする。繊維を断って切る(1cm幅)',
                 'step3':'(1)の調味料を合わせてパックに保存。',
                 'step4':'(2)の調味料を合わせてパックに保存。',
